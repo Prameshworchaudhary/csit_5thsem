@@ -35,8 +35,7 @@ int main(){
  
     decryptedMsg[i] = '\0';
  
-   // printf("Original Message: %s", msg);
-   // printf("\nKey: %s", key);
+  
     printf("\nNew Generated Key: %s", newKey);
     printf("\nEncrypted Message: %s", encryptedMsg);
     printf("\nDecrypted Message: %s", decryptedMsg);

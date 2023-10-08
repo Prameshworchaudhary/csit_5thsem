@@ -1,8 +1,5 @@
 #include <stdio.h>
-#include<string.h>
-#include<ctype.h>
-#include<stdlib.h> 
-
+#include <stdio_ext.h>
 int totient(int n)
 {
     int result = n; 
@@ -51,19 +48,22 @@ int modulo(int base, int exponent, int mod)
 }
 int main()
 {
-	for(int k = 0; k < 2; k++)
+	for(int k = 0; k < 3; k++)
 	{
-
 		// Integer Array can store value > ASCII range
-		int cipher[50];
+		int cipher[50], len;
 		int i, n, p, q, t, x, y, d = 1, e = 2;
 		char message[50], encrypt[50], decrypt[50];
-        fflush(stdin); 		// Use 17 and 11
+		__fpurge(stdin);		// User __fflush(stdin) for Windows
+		// Use 17 and 11
 		printf("Enter your message: ");
 		gets(message);
-		
+		len = strlen(message);
 		// Capitalize and convert into Z-26 form
-		for (i = 0; i < strlen(message); i++) {
+		for (i = 0; i < len; i++) {
+			// int value = toupper(message[i]) - 65;
+			// if(value != '\0') message[i] = value;
+			// else message[i] = '0';
 			message[i] = toupper(message[i]) - 65;
 		}
 		printf("Enter prime numbers p and q: ");
@@ -76,7 +76,7 @@ int main()
 		{d++;}
 
 		printf("\nEncrypted Message is: ");
-		for(i = 0; i < strlen(message); i++)
+		for(i = 0; i < len; i++)
 		{
 			// Do mod with 128 for ASCII range
 			cipher[i] = modulo(message[i], e, n);
@@ -96,6 +96,6 @@ int main()
 		decrypt[i] = '\0';
 		printf("\n");
 	}
-	printf("\nname:prameshwor chaudhary\nroll no: 17");
-
+	printf("\nName:prameshwor chaudhary");
+	printf("\nRoll No: 17\n");
 }

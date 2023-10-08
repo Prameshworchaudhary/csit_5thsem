@@ -2,9 +2,9 @@
  
 int totient(int n)
 {
-    int result = n; 
+    int p,result = n; 
     // Logic for n(1 - 1/p)(1 - 1/q)...
-    for (int p = 2; p * p <= n; ++p) {
+    for (p = 2; p * p <= n; ++p) {
         // Check if p is a prime factor.
         if (n % p == 0) {
             // If yes, then update n and result
@@ -20,8 +20,8 @@ int totient(int n)
  
 int main()
 {
-    int n;
-	for (int i = 0; i < 3; i++)
+    int n,i;
+	for ( i = 0; i < 3; i++)
 	{
 		printf("Enter a number: ");
 		scanf("%d", &n);

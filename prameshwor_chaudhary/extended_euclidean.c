@@ -17,8 +17,8 @@ int ext_euc(int a, int b, int *x, int *y)
 
 int main()
 {
-	int a, m, x, y;
-	for (int i = 0; i < 3; i++)
+	int a, m, x, y,i;
+	for ( i = 0; i < 3; i++)
 	{
 		printf("Enter an integer: ");
 		scanf("%d", &a);

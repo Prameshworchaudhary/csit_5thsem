@@ -61,8 +61,8 @@ int miller(int n, int iteration){
 }
 
 int main(){
-    int num, iteration = 5;
-    for(int i = 0; i < 3; i++){
+    int i,num, iteration = 5;
+    for( i = 0; i < 3; i++){
 		printf("Enter integer to test primality: ");
 		scanf("%d", &num);
 		if (miller(num, iteration)) printf("\n%d is inconclusive\n", num);

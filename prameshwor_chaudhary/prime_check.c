@@ -2,7 +2,8 @@
 
 int main()
 {
-	for(int j = 0; j < 3; j++)
+	int j;
+	for( j = 0; j < 3; j++)
 	{
 		int num, i, count = 0;
 		printf("Enter any number: ");

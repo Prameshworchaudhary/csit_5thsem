@@ -29,8 +29,8 @@ int mul_inverse(int a, int m)
 
 int main()
 {
-	int a, m;
-	for (int i = 0; i < 3; i++)
+	int a, m,i;
+	for ( i = 0; i < 3; i++)
 	{
 		printf("Enter an integer: ");
 		scanf("%d", &a);

@@ -28,5 +28,6 @@ int main()
     {
         printf("%d\n", arr[i]);
     }
+    printf("\nname:prameshwor chaudhary\nroll no. : 17");
     return 0;
 }
